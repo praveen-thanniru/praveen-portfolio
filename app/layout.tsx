@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import HeroVisualPortal from "./HeroVisualPortal";
 
 export const metadata: Metadata = {
   title: "Praveen Kumar Thanniru | Cloud & Data Platform Engineer",
@@ -16,7 +17,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body>{children}</body>
+      <body>
+        {children}
+        <HeroVisualPortal />
+      </body>
     </html>
   );
 }
